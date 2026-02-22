@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-heritage-green: #1B3022;
+  --color-racing-green: #0B1F13;
+  --color-gold-accent: #C5A059;
+  --color-off-white: #F9F7F2;
+  --color-stone: #E5E1D8;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Montserrat", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-off-white);
+    color: var(--color-racing-green);
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+@utility thin-border { border: 1px solid rgba(27, 48, 34, 0.1); }
+@utility divider-gold { height: 1px; background: linear-gradient(to right, transparent, var(--color-gold-accent), transparent); }
+@utility hero-overlay {
+  background: linear-gradient(to bottom, rgba(11, 31, 19, 0.7) 0%, rgba(11, 31, 19, 0.4) 50%, rgba(11, 31, 19, 0.8) 100%);
+}
